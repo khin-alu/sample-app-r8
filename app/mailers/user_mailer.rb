@@ -1,8 +1,3 @@
-class ApplicationMailer < ActionMailer::Base
-  default from: "user@realdomain.com"
-  layout "mailer"
-end
-
 class UserMailer < ApplicationMailer
   def account_activation(user)
     @user = user

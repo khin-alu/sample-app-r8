@@ -3,6 +3,16 @@ require "active_support/core_ext/integer/time"
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.action_mailer.raise_delivery_errors = false
+  # host = "127.0.0.0:3000" # Don't use this literally; use your local
+  # dev host instead
+  # Use this on the cloud IDE.
+  # config.action_mailer.default_url_options = { host: host,
+  #                                              protocol: "https" }
+  # Use this if developing on localhost.
+  # config.action_mailer.default_url_options = { host: host,
+  #                                              protocol: "http" }
+
   # Make code changes take effect immediately without server restart.
   config.enable_reloading = true
 
