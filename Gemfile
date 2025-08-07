@@ -17,6 +17,7 @@ gem "stimulus-rails", "1.3.4"
 gem "jbuilder", "2.13.0"
 gem "puma", "6.6.0"
 gem "bootsnap", "1.18.6", require: false
+gem "dotenv", "3.1.8"
 
 group :development, :test do
   gem "sqlite3", "2.7.2"
