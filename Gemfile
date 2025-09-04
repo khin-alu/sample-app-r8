@@ -21,6 +21,9 @@ gem "puma", "6.6.0"
 gem "bootsnap", "1.18.6", require: false
 gem "dotenv", "3.1.8"
 
+# Security
+gem 'recaptcha', '~> 5.16.0'
+
 group :development, :test do
   gem "sqlite3", "2.7.2"
   gem "debug", "1.11.0", platforms: %i[ mri mingw x64_mingw ]

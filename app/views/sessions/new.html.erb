@@ -16,6 +16,10 @@
             <span>Remember me on this computer</span>
         <% end %>
 
+        <div class="form-group" style="margin: 15px 0;">
+          <%= recaptcha_tags theme: 'light' %>
+        </div>
+
         <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
 

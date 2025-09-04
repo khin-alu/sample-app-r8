@@ -4,6 +4,14 @@ class SessionsController < ApplicationController
 
   def create
     user = User.find_by(email: params[:session][:email].downcase)
+    
+    # Verify reCAPTCHA first
+    unless verify_recaptcha
+      flash.now[:danger] = "Please complete the reCAPTCHA verification"
+      render "new", status: :unprocessable_entity
+      return
+    end
+    
     if user && user.authenticate(params[:session][:password])
       if user.activated?
         forwarding_url = session[:forwarding_url]
