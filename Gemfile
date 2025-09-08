@@ -21,6 +21,7 @@ gem "puma", "6.6.0"
 gem "bootsnap", "1.18.6", require: false
 gem "dotenv", "3.1.8"
 gem "sendgrid-ruby"
+gem "recaptcha"
 
 group :development, :test do
   gem "sqlite3", "2.7.2"
